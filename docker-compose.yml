@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./server
+    ports:
+      - "5000:5000"  # Adjust according to your backend port
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./client
+    ports:
+      - "5173:5173"  # Map frontend React port
+    networks:
+      - app-network
+
+# Define the network
+networks:
+  app-network:
+    driver: bridge
