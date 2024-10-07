@@ -25,4 +25,4 @@ Ensure that the Docker containers are running without errors. You can check the 
 If you make changes to the code, you might need to rebuild the containers by running:
 
 
-docker-compose up --build
+docker-compose up --build# todo_bok_donet
